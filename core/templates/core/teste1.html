@@ -22,12 +22,55 @@
     {% endfor %}
 
     <h2>Books of a Specific Author</h2>
-    {% for book in books_of_author %}
+    {% for book in books_by_author %}
         <p>{{ book.title }}</p>
     {% endfor %}
 
     <h2>Number of Books by a Specific Author</h2>
     <p>{{ num_books_of_author }}</p>
 
+    <h2>Authors with specific bio</h2>
+    {% for author in authors_with_specific_bio %}
+        <p>{{ author.name}}</p>
+    {% endfor %}
+
+    <h2>Books by High Rating</h2>
+    {% for book in books_high_ratings %}
+        <p>{{ book.title }}</p>
+    {% endfor %}
+
+    <h2> Profile User by Spectific Website</h2>
+    {% for profile in profiles_with_specific_website %}
+        <p>{{ profile.user }}</p>
+        <p>{{ profile.website }}</p>
+    {% endfor %}
+
+    <h2> Books Without Review</h2>
+    {% for book in books_without_reviews %}
+        <p>{{ book }}</p>
+        {% endfor %}
+
+    <h2> autors by number of books</h2>
+    {% for autors in authors_by_books_count %}
+        <p>{{ autors.name }}</p>
+        {% endfor %}
+
+    <h2> books by 150 more </h2>
+    {% for book in books_long_summaries %}
+        <p>{{ book.title }}</p>
+        {% endfor %}
+    
+
+    <h2> reviews by authors </h2>
+    {% for reviews in reviews_of_author_books %}
+        <p>{{ reviews.book }}</p>
+        <p>{{ reviews.review_text }}</p>
+        <p>{{ reviews.rating }}</p>
+        {% endfor %}
+
+    <h2> books by tags </h2>
+    {% for book in books_with_multiple_tags %}
+        <p>{{ book.title }}</p>
+        {% endfor %}
 </body>
 </html>
